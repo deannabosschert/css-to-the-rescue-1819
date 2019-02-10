@@ -1,0 +1,87 @@
+/* BASE */
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: serif;
+}
+
+header{
+  text-align: center;
+}
+
+main{
+  color: white;
+  text-align: center;
+  padding: 5vw;
+}
+
+section{
+  background-color: black;
+
+}
+
+article{
+  background-color: grey;
+  border-width: 60px;
+  border-color: blue;
+  margin: 1rem;
+  padding: 0.5rem 1.5rem 1.5rem 1rem;
+  border-radius: 1rem;
+
+}
+
+span{
+
+}
+
+blockquote{
+
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-variant: small-caps;
+  font-size: 2rem;
+
+}
+
+h3{
+  font-variant: small-caps;
+}
+
+p{
+
+}
+
+
+
+
+/* LAYOUT */
+.border{
+  background-color: blue;
+  margin: 5vw 10vw;
+  padding: 2vw;
+}
+
+/* MODULES */
+.categories{
+  display: flex;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* STATE */
+
+/* THEME */
