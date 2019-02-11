@@ -21,6 +21,7 @@ main{
   color: white;
   text-align: center;
   padding: 5vw;
+  margin: 5vw 10vw;
 }
 
 section{
@@ -56,8 +57,10 @@ h1{
 
 h2{
   font-variant: small-caps;
-  font-size: 2rem;
-
+  font-size: 2.7rem;
+  border-bottom-style: solid;
+  border-bottom-width: 0.05rem;
+  border-bottom-color: white;
 }
 
 h3{
@@ -74,7 +77,7 @@ p{
 /* LAYOUT */
 .border{
   background-color: blue;
-  margin: 5vw 10vw;
+  margin: 5vw 15vw;
   padding: 2vw;
 }
 
@@ -86,6 +89,22 @@ p{
   justify-content: center;
 }
 
+.firstThing{
+      border-bottom: 100px solid blue;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+      width: 100px;
+}
+
+
 /* STATE */
+
+article:hover{
+  background-color: white;
+  color: black;
+  border-style: double;
+  transition-delay: 0.15s;
+}
 
 /* THEME */
