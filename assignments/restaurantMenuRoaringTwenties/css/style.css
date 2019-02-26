@@ -85,7 +85,7 @@ img{
 
 /* LAYOUT */
 .border{
-  background-color: blue;
+  background-color: black;
   margin: 5vw 15vw;
   padding: 2vw;
 }
@@ -109,11 +109,13 @@ img{
 }
 
 .circleLeftAbove{
-      display: inline-flex;
+      /* display: inline-flex; */
       height: 30%;
       width: 30%;
       position: absolute;
-      /* z-index: -1; */
+      z-index: 5;
+      margin-left: -50vw;
+      margin-bottom: -30vw;
     }
 
 .necklace{
@@ -141,7 +143,7 @@ article:hover{
   transition-delay: 0.15s;
 }
 
-.circleLeftAbove:hover {
+main:hover .circleLeftAbove {
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
