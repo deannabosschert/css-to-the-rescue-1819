@@ -29,6 +29,7 @@ section{
   border-style: double;
   border-width: 1rem;
   border-color: white;
+  transform: skew(1deg);
 
 }
 
@@ -37,9 +38,9 @@ article{
   border-width: 0.1rem;
   border-radius: 1rem;
   border-color: white;
+
   margin: 1rem;
   padding: 0.5rem 1.2rem 1.2rem 1rem;
-
 
 }
 
@@ -105,7 +106,16 @@ img{
       /* z-index: -1; */
     }
 
-
+.necklace{
+  /* display: inline-flex; */
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  margin-left: 65vw;
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  z-index: 6;
+}
 
 
 
@@ -130,6 +140,20 @@ article:hover{
    /* transform: rotate(3grad); */
    /* transform: rotate(.03turn);  */
 }
+.necklace:after{
+    position: absolute;
+    top: -10px; left: 50%;
+    z-index: 0;
+    transform: rotate(45deg);
+}
+/* nail */
+.necklace:before{
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+}
 
 
 @keyframes spin {
@@ -141,5 +165,9 @@ article:hover{
     }
 }
 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
 
 /* THEME */
