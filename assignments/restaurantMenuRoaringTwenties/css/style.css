@@ -11,6 +11,7 @@ html{
 
 body{
   font-family: serif;
+  background-color: black;
 }
 
 header{
@@ -18,29 +19,30 @@ header{
 }
 
 main{
-  color: white;
+  color: black;
   text-align: center;
   padding: 5vw;
   margin: 5vw 10vw;
 }
 
 section{
-  background-color: black;
+  background-color: white;
   border-style: double;
   border-width: 1rem;
-  border-color: white;
+  border-color: black;
   transform: skew(1deg);
 
 }
 
 article{
-  border-style: solid;
+  border-style: ridge;
   border-width: 0.1rem;
   border-radius: 1rem;
-  border-color: white;
-
+  border-color: red;
+  background-color: black;
   margin: 1rem;
   padding: 0.5rem 1.2rem 1.2rem 1rem;
+  color: white;
 
 }
 
@@ -56,6 +58,7 @@ h1{
   font-size: 3rem;
   font-family: 'limelight', sans-serif;
   font-variant: small-caps;
+  color: white;
 
 }
 
@@ -70,10 +73,11 @@ h2{
 h3{
   font-variant: small-caps;
   font-style: "Oswald";
+  color: white;
 }
 
 p{
-
+  color: white;
 }
 
 img{
@@ -98,6 +102,12 @@ img{
   justify-content: center;
 }
 
+.fakeHamburger{
+  font-family: 'Bowlby One SC';
+  font-variant: small-caps;
+
+}
+
 .circleLeftAbove{
       display: inline-flex;
       height: 30%;
@@ -112,6 +122,7 @@ img{
   width: 40%;
   position: absolute;
   margin-left: 65vw;
+  margin-top: -4vw;
   animation: swing ease-in-out 1s infinite alternate;
   transform-origin: center -20px;
   z-index: 6;
@@ -124,7 +135,7 @@ img{
 /* STATE */
 
 article:hover{
-  background-color: white;
+  background-color: black;
   color: black;
   border-style: double;
   transition-delay: 0.15s;
