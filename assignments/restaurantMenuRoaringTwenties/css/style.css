@@ -12,17 +12,26 @@ html{
 body{
   font-family: serif;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 header{
   text-align: center;
+  color: white;
+  align-items: flex-start;
 }
 
 main{
+  /* max-width: 75%; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
   color: black;
   text-align: center;
-  padding: 5vw;
-  margin: 5vw 10vw;
+  /* padding: 5vw; */
+  /* margin: 5vw 10vw; */
+  padding: 5vw 20vw;
 }
 
 section{
@@ -30,19 +39,23 @@ section{
   border-style: double;
   border-width: 1rem;
   border-color: black;
-  transform: skew(1deg);
+  transform: skew(-1deg);
+  /* flex-shrink: 5; */
+
 
 }
 
 article{
-  border-style: ridge;
-  border-width: 0.1rem;
+  border-style: double;
+  border-width: 0.2rem;
   border-radius: 1rem;
-  border-color: red;
+  border-color: #DABF98;
   background-color: black;
+  color: white;
   margin: 1rem;
   padding: 0.5rem 1.2rem 1.2rem 1rem;
-  color: white;
+  transform: skew(-1deg);
+
 
 }
 
@@ -58,8 +71,6 @@ h1{
   font-size: 3rem;
   font-family: 'limelight', sans-serif;
   font-variant: small-caps;
-  color: white;
-
 }
 
 h2{
@@ -73,25 +84,26 @@ h2{
 h3{
   font-variant: small-caps;
   font-style: "Oswald";
-  color: white;
 }
 
 p{
-  color: white;
+
 }
 
 img{
 }
 
 /* LAYOUT */
-.border{
-  background-color: black;
-  margin: 5vw 15vw;
-  padding: 2vw;
-}
-
 .subtitle{
   font-family: "Oswald";
+}
+
+.skewLeft{
+  transform: skew(2deg);
+}
+
+.skewLeft article{
+  transform: skew(2deg);
 }
 
 /* MODULES */
@@ -103,25 +115,49 @@ img{
 }
 
 .fakeHamburger{
+  position: absolute;
+  flex-direction: column;
+  align-content: space-between;
+  flex-basis: auto;
+  max-width: 10vw;
+  max-height: 15vw;
+  /* margin: 0vw 1vw 0vw 3vw; */
+}
+
+.fakeHamburger p{
+  display: flex;
   font-family: 'Bowlby One SC';
   font-variant: small-caps;
+  font-size: 1.2vw;
+  background-color: white;
+  line-height: 75%;
+  color: #D3D3D3;
+  max-width: 10vw;
+
+  /* margin: 0vw 1vw 0vw 3vw; */
+}
+
+.fakeHamburger span{
+  max-width: 10vw;
 
 }
 
 .circleLeftAbove{
-      /* display: inline-flex; */
-      height: 30%;
-      width: 30%;
-      position: absolute;
-      z-index: 5;
-      margin-left: -50vw;
-      margin-bottom: -30vw;
+  max-height: 20vw;
+  max-width: 20vw;
+  flex-basis: 0;
+  position: absolute;
+  z-index: 4;
+  align-self: flex-start;
+  /* margin-left: -9vw;
+  margin-top: -8.5vw; */
+  /* flex-shrink: 1; */
     }
 
 .necklace{
   /* display: inline-flex; */
-  height: 40%;
-  width: 40%;
+  max-height: 50%;
+  max-width: 50%;
   position: absolute;
   margin-left: 65vw;
   margin-top: -4vw;
@@ -137,10 +173,10 @@ img{
 /* STATE */
 
 article:hover{
-  background-color: black;
+  background-color: white;
   color: black;
   border-style: double;
-  transition-delay: 0.15s;
+  transition-delay: 0.10s;
 }
 
 main:hover .circleLeftAbove {

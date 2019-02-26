@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>A template for a responsive restaurant menu</title>
+	<title>Roaring Twenties responsive restaurant menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- SUGGESTIONS FOR STYLING
 	https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
@@ -18,7 +18,7 @@
 
 	<header>
 		<div class="fakeHamburger">
-			<p>not some<br>hamburger<br>navigation<br></p>
+			<p><span>no.classic</span></p><p><span>hamburger</span></p><p><span>navigation</span></p>
 		</div>
 		<h1><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
 		<p class="subtitle">appetizing since 1924</p>
@@ -30,6 +30,7 @@
 	<main>
 		<!--  top left decoration of border-->
 	<img class="circleLeftAbove" src="img/circleLeftAbove.svg">
+	<div class="menu">
 	<section>
 			<h2>Noshes</h2>
 	<div class="noshes categories">
@@ -54,6 +55,7 @@
 		<article>
 			<h3>Kasha Varnishkas</h3>
 			<p>buckwheat, caramelized onion, bowtie egg noodles</p>
+			<div>&#8364;13</div>
 		</article>
 
 		<article>
@@ -84,7 +86,7 @@
 	</section>
 	</div>
 
-	<section>
+	<section class="skewLeft">
 			<h2>Boards</h2>
 		<div class="boards categories">
 			<article>
@@ -143,7 +145,7 @@
 	</section>
 
 
-	<section>
+	<section class="skewLeft">
 			<h2>Eggs</h2>
 			<p>served all the time</p>
 
@@ -226,7 +228,8 @@
 			</article>
 		</div>
 	</section>
-	<section>
+
+	<section class="skewLeft">
 		<h2>Salads</h2>
 		<div class="salads categories">
 			<article>
@@ -306,6 +309,7 @@
 			</article>
 		</div>
 	</section>
+</div>
 	</main>
 <!-- </div> -->
 <!-- HTML taken and adjusted from https://codepen.io/julesforrest/pen/VqXvgQ -->
