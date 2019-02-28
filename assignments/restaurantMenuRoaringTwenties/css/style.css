@@ -1,41 +1,42 @@
 /* to do:
 - svg circle laten roteren in verschillende richtingen
 - old tv effect background
-- fake hamburger menu */
+- fake hamburger menu
+
+source Cinema effect: https://www.bypeople.com/pure-css-cinema-effect/*/
 
 /* BASE */
 
-*{
+* {
   box-sizing: border-box;
 }
 
-html{
+html {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-family: serif;
-  background-color: black;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
-header{
+header {
   text-align: center;
   color: white;
   align-items: flex-start;
 }
 
-main{
+main {
   /* max-width: 75%; */
   padding: 5vw 18vw;
   /* padding: 5vw; */
   /* margin: 5vw 10vw; */
-
 }
 
-section{
+section {
   text-align: center;
   background-color: white;
   border-style: double;
@@ -43,60 +44,59 @@ section{
   border-color: black;
   transform: skew(-1deg);
   /* flex-shrink: 5; */
-
-
 }
 
-article{
+article {
   border-style: double;
   border-width: 0.2rem;
   border-radius: 1rem;
-  border-color: #DABF98;
+  border-color: #dabf98;
   background-color: black;
   color: white;
   margin: 1rem;
   padding: 0.5rem 1.2rem 1.2rem 1rem;
   transform: skew(-1deg);
-
-
 }
 
-span{
-
+span {
 }
 
-blockquote{
-
+blockquote {
 }
 
-h1{
+h1 {
   font-size: 3rem;
-  font-family: 'limelight', sans-serif;
+  font-family: "limelight", sans-serif;
   font-variant: small-caps;
 }
 
-h2{
+h2 {
   font-size: 2.7rem;
   border-bottom-style: solid;
   border-bottom-width: 0.05rem;
   border-bottom-color: white;
-  font-family: 'limelight';
+  font-family: "limelight";
 }
 
-h3{
+h3 {
   font-variant: small-caps;
   font-style: "Oswald";
 }
 
-p{
-
+p {
 }
 
-img{
+img {
 }
 
 /* LAYOUT */
-.menu{
+.background {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -104,27 +104,27 @@ img{
   align-self: center;
 }
 
-.skewLeft{
+.skewLeft {
   transform: skew(2deg);
 }
 
-.skewLeft article{
+.skewLeft article {
   transform: skew(2deg);
 }
 
 /* MODULES */
-.subtitle{
+.subtitle {
   font-family: "Oswald";
 }
 
-.categories{
+.categories {
   display: flex;
   font-size: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.fakeHamburger{
+.fakeHamburger {
   margin-left: 1.7vw;
   position: absolute;
   flex-direction: column;
@@ -133,27 +133,27 @@ img{
   max-width: 7.5vw;
   max-height: 13vw;
   /* margin: 0vw 1vw 0vw 3vw; */
+  z-index: 25;
 }
 
-.fakeHamburger p{
+.fakeHamburger p {
   display: flex;
-  font-family: 'Bowlby One SC';
+  font-family: "Bowlby One SC";
   font-variant: small-caps;
   font-size: 1.2vw;
   background-color: white;
   line-height: 75%;
-  color: #D3D3D3;
+  color: #d3d3d3;
   max-width: 7.5vw;
 
   /* margin: 0vw 1vw 0vw 3vw; */
 }
 
-.fakeHamburger span{
+.fakeHamburger span {
   max-width: 7.5vw;
-
 }
 
-.circleLeftAbove{
+.circleLeftAbove {
   max-height: 20vw;
   max-width: 20vw;
   position: absolute;
@@ -163,11 +163,10 @@ img{
   margin-left: -9vw;
   margin-top: -9vw;
 
-
   /* flex-shrink: 1; */
-    }
+}
 
-.necklace{
+.necklace {
   /* display: inline-flex; */
   max-height: 50%;
   max-width: 50%;
@@ -179,61 +178,93 @@ img{
   z-index: 6;
 }
 
-
-
-
-
 /* STATE */
-
-article:hover{
+article:hover {
   background-color: white;
   color: black;
   border-style: double;
-  transition-delay: 0.10s;
+  transition-delay: 0.1s;
 }
 
 main:hover .circleLeftAbove {
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  /* transform: rotate(3deg); */
-   /* transform: rotate(0.3rad);/ */
-   /* transform: rotate(3grad); */
-   /* transform: rotate(.03turn);  */
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
 }
-.necklace:after{
-    position: absolute;
-    top: -10px; left: 50%;
-    z-index: 0;
-    transform: rotate(45deg);
+.necklace:after {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  transform: rotate(45deg);
 }
 
-.necklace:before{
-    position: absolute;
-    width: 5px; height: 5px;
-    top: -14px;left: 54%;
-    z-index: 5;
-    border-radius: 50% 50%;
+.necklace:before {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  z-index: 5;
+  border-radius: 50% 50%;
 }
 
-.fakeHamburger:hover p{
+.fakeHamburger:hover p {
   background-color: black;
   color: white;
+  padding-left: -10vw;
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes swing {
-    0% { transform: rotate(3deg); }
-    100% { transform: rotate(-3deg); }
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 
 /* THEME */
+#grain {
+  height: 800vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  opacity: 0.8;
+  z-index: 20;
+  position: absolute;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+  visibility: hidden;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ #grain {
+  visibility: visible;
+}
+
+input[type="checkbox"]:checked ~ .fakeHamburger {
+  z-index: 30;
+}
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
