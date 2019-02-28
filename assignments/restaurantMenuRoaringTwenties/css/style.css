@@ -1,3 +1,8 @@
+/* to do:
+- svg circle laten roteren in verschillende richtingen
+- old tv effect background
+- fake hamburger menu */
+
 /* BASE */
 
 *{
@@ -24,17 +29,14 @@ header{
 
 main{
   /* max-width: 75%; */
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  color: black;
-  text-align: center;
+  padding: 5vw 18vw;
   /* padding: 5vw; */
   /* margin: 5vw 10vw; */
-  padding: 5vw 20vw;
+
 }
 
 section{
+  text-align: center;
   background-color: white;
   border-style: double;
   border-width: 1rem;
@@ -94,8 +96,12 @@ img{
 }
 
 /* LAYOUT */
-.subtitle{
-  font-family: "Oswald";
+.menu{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: black;
+  align-self: center;
 }
 
 .skewLeft{
@@ -107,6 +113,10 @@ img{
 }
 
 /* MODULES */
+.subtitle{
+  font-family: "Oswald";
+}
+
 .categories{
   display: flex;
   font-size: 1rem;
@@ -115,12 +125,13 @@ img{
 }
 
 .fakeHamburger{
+  margin-left: 1.7vw;
   position: absolute;
   flex-direction: column;
   align-content: space-between;
   flex-basis: auto;
-  max-width: 10vw;
-  max-height: 15vw;
+  max-width: 7.5vw;
+  max-height: 13vw;
   /* margin: 0vw 1vw 0vw 3vw; */
 }
 
@@ -132,25 +143,27 @@ img{
   background-color: white;
   line-height: 75%;
   color: #D3D3D3;
-  max-width: 10vw;
+  max-width: 7.5vw;
 
   /* margin: 0vw 1vw 0vw 3vw; */
 }
 
 .fakeHamburger span{
-  max-width: 10vw;
+  max-width: 7.5vw;
 
 }
 
 .circleLeftAbove{
   max-height: 20vw;
   max-width: 20vw;
-  flex-basis: 0;
   position: absolute;
-  z-index: 4;
+  display: inline-flex;
+  z-index: -1;
   align-self: flex-start;
-  /* margin-left: -9vw;
-  margin-top: -8.5vw; */
+  margin-left: -9vw;
+  margin-top: -9vw;
+
+
   /* flex-shrink: 1; */
     }
 
@@ -195,7 +208,7 @@ main:hover .circleLeftAbove {
     z-index: 0;
     transform: rotate(45deg);
 }
-/* nail */
+
 .necklace:before{
     position: absolute;
     width: 5px; height: 5px;
@@ -204,6 +217,10 @@ main:hover .circleLeftAbove {
     border-radius: 50% 50%;
 }
 
+.fakeHamburger:hover p{
+  background-color: black;
+  color: white;
+}
 
 @keyframes spin {
     from {
