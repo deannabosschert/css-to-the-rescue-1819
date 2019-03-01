@@ -246,6 +246,8 @@ main:hover .circleLeftAbove {
   z-index: 20;
   position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+  repeat center center;
+  animation: grain 0.5s steps(1) infinite;
   visibility: hidden;
 }
 
@@ -260,4 +262,18 @@ input[type="checkbox"]:checked ~ #grain {
 
 input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
+}
+
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
 }
