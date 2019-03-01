@@ -51,25 +51,12 @@ article {
   border-width: 0.2rem;
   border-radius: 1rem;
   border-color: #dabf98;
-  background-color: black;
+  background: black;
   color: white;
   margin: 1rem;
   padding: 0.5rem 1.2rem 1.2rem 1rem;
-  /* transform: skew(-1deg); */
+  transform: skew(-1deg);
 }
-
-/* #article:before {
-  border-style: double;
-  content: "";
-  position: absolute;
-  top: 6vw;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: -3vw solid transparent;
-  border-right: 3vw solid transparent;
-  border-bottom: 6vw solid white;
-} */
 
 span {
 }
@@ -139,7 +126,8 @@ img {
 
 .fakeHamburger {
   margin-left: 1.7vw;
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   flex-direction: column;
   align-content: space-between;
   flex-basis: auto;
@@ -272,12 +260,4 @@ input[type="checkbox"]:checked ~ #grain {
 
 input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
-}
-
-#triangle-right {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid red;
-  border-bottom: 50px solid transparent;
 }
