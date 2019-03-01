@@ -236,19 +236,40 @@ main:hover .circleLeftAbove {
   }
 }
 
+@keyframes grain {
+  0% {
+    transform: translate(-0.5rem, -0.5rem);
+  }
+  100% {
+    transform: rotate(1deg);
+    transform: translate(0.5rem, 0.5rem);
+  }
+}
+
 /* THEME */
-#grain {
+.grain {
   height: 800vh;
   width: 125vw;
   background: cover;
   margin-left: -25vw;
-  opacity: 0.8;
+  margin-top: -25vw;
+  opacity: 0.4;
   z-index: 20;
   position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
-  repeat center center;
-  animation: grain 0.5s steps(1) infinite;
   visibility: hidden;
+}
+
+.grain:hover {
+  height: 850vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  margin-top: -25vw;
+  opacity: 0.7;
+  z-index: 23;
+  position: absolute;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
 input[type="checkbox"] {
@@ -256,24 +277,33 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked ~ #grain {
+input[type="checkbox"]:checked ~ .grain {
   visibility: visible;
+  height: 800vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  margin-top: -25vw;
+  opacity: 0.7;
+  z-index: 20;
+  position: absolute;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+}
+
+input[type="checkbox"]:checked ~ .grain:hover {
+  visibility: visible;
+  height: 850vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  margin-top: -25vw;
+  opacity: 0.9;
+  z-index: 20;
+  position: absolute;
+  animation: grain 0.01ms infinite;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
 input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
-}
-
-
-@keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
 }
