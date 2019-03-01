@@ -1,9 +1,4 @@
-/* to do:
-- svg circle laten roteren in verschillende richtingen
-- old tv effect background
-- fake hamburger menu
-
-source Cinema effect: https://www.bypeople.com/pure-css-cinema-effect/*/
+/* source Cinema effect: https://www.bypeople.com/pure-css-cinema-effect/*/
 
 /* BASE */
 
@@ -317,7 +312,6 @@ input[type="checkbox"]:checked ~ .grain {
 
 input[type="checkbox"]:checked ~ .grain:hover {
   visibility: visible;
-
   animation: grain 2s steps(10) infinite;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
   content: "";
