@@ -237,12 +237,36 @@ main:hover .circleLeftAbove {
 }
 
 @keyframes grain {
-  0% {
-    transform: translate(-0.5rem, -0.5rem);
-  }
+  0%,
   100% {
-    transform: rotate(1deg);
-    transform: translate(0.5rem, 0.5rem);
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }
 
@@ -253,7 +277,7 @@ main:hover .circleLeftAbove {
   background: cover;
   margin-left: -25vw;
   margin-top: -25vw;
-  opacity: 0.4;
+  opacity: 0.8;
   z-index: 20;
   position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
@@ -261,14 +285,15 @@ main:hover .circleLeftAbove {
 }
 
 .grain:hover {
-  height: 850vh;
-  width: 125vw;
-  background: cover;
-  margin-left: -25vw;
-  margin-top: -25vw;
-  opacity: 0.7;
+  animation: grain 8s steps(10) infinite;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+  content: "";
+  height: 850vw;
+  left: -400vw;
+  opacity: 0.9;
+  top: 820vw;
+  width: 150vw;
   z-index: 23;
-  position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
@@ -284,7 +309,7 @@ input[type="checkbox"]:checked ~ .grain {
   background: cover;
   margin-left: -25vw;
   margin-top: -25vw;
-  opacity: 0.7;
+  opacity: 0.9;
   z-index: 20;
   position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
@@ -292,15 +317,16 @@ input[type="checkbox"]:checked ~ .grain {
 
 input[type="checkbox"]:checked ~ .grain:hover {
   visibility: visible;
-  height: 850vh;
-  width: 125vw;
-  background: cover;
-  margin-left: -25vw;
-  margin-top: -25vw;
+
+  animation: grain 2s steps(10) infinite;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+  content: "";
+  height: 850vw;
+  left: -400vw;
   opacity: 0.9;
-  z-index: 20;
-  position: absolute;
-  animation: grain 0.01ms infinite;
+  top: 820vw;
+  width: 150vw;
+  z-index: 23;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
