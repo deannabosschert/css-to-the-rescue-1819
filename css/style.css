@@ -25,10 +25,7 @@ header {
 }
 
 main {
-  /* max-width: 75%; */
   padding: 5vw 18vw;
-  /* padding: 5vw; */
-  /* margin: 5vw 10vw; */
 }
 
 section {
@@ -38,7 +35,6 @@ section {
   border-width: 1rem;
   border-color: black;
   transform: skew(-1deg);
-  /* flex-shrink: 5; */
 }
 
 article {
@@ -122,13 +118,11 @@ img {
 .fakeHamburger {
   margin-left: 1.7vw;
   position: fixed;
-  /* position: absolute; */
   flex-direction: column;
   align-content: space-between;
   flex-basis: auto;
   max-width: 7.5vw;
   max-height: 13vw;
-  /* margin: 0vw 1vw 0vw 3vw; */
   z-index: 25;
 }
 
@@ -141,29 +135,23 @@ img {
   line-height: 75%;
   color: #d3d3d3;
   max-width: 7.5vw;
-
-  /* margin: 0vw 1vw 0vw 3vw; */
 }
 
 .fakeHamburger span {
   max-width: 7.5vw;
 }
 
-.circleLeftAbove {
+.thirdCircle {
   max-height: 20vw;
   max-width: 20vw;
   position: absolute;
-  display: inline-flex;
   z-index: -1;
   align-self: flex-start;
   margin-left: -9vw;
   margin-top: -9vw;
-
-  /* flex-shrink: 1; */
 }
 
 .necklace {
-  /* display: inline-flex; */
   max-height: 50%;
   max-width: 50%;
   position: absolute;
@@ -189,6 +177,15 @@ main:hover .circleLeftAbove {
   transition-timing-function: ease-in-out;
   transition-delay: 1s;
 }
+
+main:hover .thirdCircle {
+  animation-name: spinLeft;
+  animation-duration: -5000ms;
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+}
+
 .necklace:after {
   position: absolute;
   top: -10px;
@@ -213,12 +210,34 @@ main:hover .circleLeftAbove {
   padding-left: -10vw;
 }
 
+.grain:hover {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+  content: "";
+  height: 850vw;
+  left: -400vw;
+  opacity: 0.9;
+  top: 820vw;
+  width: 150vw;
+  z-index: 23;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
@@ -277,19 +296,6 @@ main:hover .circleLeftAbove {
   position: absolute;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
   visibility: hidden;
-}
-
-.grain:hover {
-  animation: grain 8s steps(10) infinite;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
-  content: "";
-  height: 850vw;
-  left: -400vw;
-  opacity: 0.9;
-  top: 820vw;
-  width: 150vw;
-  z-index: 23;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
 input[type="checkbox"] {
