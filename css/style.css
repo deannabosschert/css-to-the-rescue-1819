@@ -17,12 +17,14 @@ body {
   font-family: serif;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 header {
   text-align: center;
   color: white;
   align-items: flex-start;
+  z-index: 5;
 }
 
 main {
@@ -143,13 +145,13 @@ img {
 }
 
 .circleLeftAbove{
-  max-width: 20vh;
-  max-height: 20vh;
+  max-width: 25vh;
+  max-height: 25vh;
 }
 
 #thirdCircle {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   align-self: flex-start;
   margin-left: -9vw;
   margin-top: -9vw;
@@ -320,8 +322,9 @@ input[type="checkbox"]:checked ~ .grains {
   margin-top: -25vw;
   opacity: 0.9;
   z-index: 20;
-  position: absolute;
+  position: fixed;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+  background-size: cover;
 }
 
 input[type="checkbox"]:checked ~ .grains:hover {
@@ -342,12 +345,8 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
 }
 
-.grainbg{
-  display: inline-flex;
-}
 
-.grain1, .grain2, .grain3{
-
+.grain1 .grain2 .grain3{
 }
 
 .grain1{
@@ -355,11 +354,11 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   height: 210%;
   margin-left: -20%;
   margin-top: -10%;
-  animation: grain 0.02s steps(10) infinite;
+  animation: grain 0.0002s steps(10) infinite;
   animation-direction: reverse;
-  z-index: -3;
+  z-index: 0;
   position: fixed;
-  opacity: 1;
+  opacity: 0.8;
 
 }
 
@@ -368,9 +367,9 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   height: 200%;
   margin-left: -10%;
   margin-top: -10%;
-  animation: grain 0.04s steps(10) infinite;
+  animation: grain 0.0004s steps(10) infinite;
   position: fixed;
-  z-index: -2;
+  z-index: -1;
   opacity: 0.8;
 }
 
@@ -379,9 +378,15 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   height: 200%;
   margin-left: -10%;
   margin-top: -10%;
-  z-index: -1;
-  opacity: 1;
+  z-index: -2;
+  opacity: 0.85;
   position: fixed;
+}
+
+.grainbg{
+  display: inline-flex;
+  background-color: black;
+  opacity: 0.4;
 }
 
 

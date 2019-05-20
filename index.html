@@ -12,7 +12,7 @@
 	<div class="grainbg">
 	  <svg class="grain1">
 	    <filter id='noise'>
-	      <feTurbulence baseFrequency="0.7" result="NOISE" numOctaves="1"/>
+	      <feTurbulence baseFrequency="0.8" result="NOISE" numOctaves="1"/>
 	      <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="3000"></feDisplacementMap>
 	    </filter>
 
@@ -21,7 +21,7 @@
 
 	  <svg class="grain2">
 	      <filter id='noise2'>
-	      <feTurbulence baseFrequency="0.3" result="NOISE" numOctaves="9"/>
+	      <feTurbulence baseFrequency="0.6" result="NOISE" numOctaves="9"/>
 	      <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="100"></feDisplacementMap>
 	    </filter>
 
@@ -30,7 +30,7 @@
 
 	  <svg class="grain3">
 	      <filter id='noise3'>
-	        <feTurbulence baseFrequency="0.2" type="fractalNoise"/>
+	        <feTurbulence baseFrequency="0.3" type="fractalNoise"/>
 	        <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="1000"></feDisplacementMap>
 	    </filter>
 
