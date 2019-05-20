@@ -9,6 +9,8 @@
 html {
   margin: 0;
   padding: 0;
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+
 }
 
 body {
@@ -81,7 +83,7 @@ img {
 
 /* LAYOUT */
 .background {
-  background-color: black;
+  /* background-color: black; */
   height: 100%;
   width: 100%;
 }
@@ -340,48 +342,46 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
 }
 
+.grainbg{
+  display: inline-flex;
+}
 
-
-
-
-
-
-.bg{
-  position: fixed;
-  opacity: 0.5;
-
-  /* z-index: -20; */
+.grain1, .grain2, .grain3{
 
 }
-/* .grainbg{
-  position: fixed;
-  height: 500vh;
-  width: 500vw;
-  z-index: 20;
-} */
 
 .grain1{
-  width: 100vw;
-  height: 100vh;
+  width: 130%;
+  height: 210%;
+  margin-left: -20%;
+  margin-top: -10%;
   animation: grain 0.02s steps(10) infinite;
   animation-direction: reverse;
+  z-index: -3;
+  position: fixed;
+  opacity: 1;
+
 }
 
 .grain2{
-  width: 110vw;
-  height: 110vh;
-  position: absolute;
-  top: -5%;
-  left: -5%;
+  width: 130%;
+  height: 200%;
+  margin-left: -10%;
+  margin-top: -10%;
   animation: grain 0.04s steps(10) infinite;
+  position: fixed;
+  z-index: -2;
+  opacity: 0.8;
 }
 
 .grain3{
-  width: 200vw;
-  height: 250v
-  top: -10%;
-  left: -10%;
-  opacity: 0.2;
+  width: 130%;
+  height: 200%;
+  margin-left: -10%;
+  margin-top: -10%;
+  z-index: -1;
+  opacity: 1;
+  position: fixed;
 }
 
 
