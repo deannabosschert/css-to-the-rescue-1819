@@ -15,7 +15,6 @@ body {
   font-family: serif;
   display: flex;
   flex-direction: column;
-  background-color: black;
 }
 
 header {
@@ -141,9 +140,12 @@ img {
   max-width: 7.5vw;
 }
 
-.thirdCircle {
-  max-height: 20vw;
-  max-width: 20vw;
+.circleLeftAbove{
+  max-width: 20vh;
+  max-height: 20vh;
+}
+
+#thirdCircle {
   position: absolute;
   z-index: -1;
   align-self: flex-start;
@@ -162,6 +164,7 @@ img {
   z-index: 6;
 }
 
+
 /* STATE */
 article:hover {
   background-color: white;
@@ -172,18 +175,21 @@ article:hover {
 
 main:hover .circleLeftAbove {
   animation-name: spin;
-  animation-duration: 5000ms;
+  animation-duration: 4000ms;
   animation-iteration-count: infinite;
   transition-timing-function: ease-in-out;
   transition-delay: 1s;
+  transform-origin: center;
 }
 
-main:hover .thirdCircle {
+main:hover #thirdCircle {
   animation-name: spinLeft;
-  animation-duration: -5000ms;
+  animation-direction: reverse;
+  transform-origin: center;
+  animation-duration: 3000ms;
   animation-iteration-count: infinite;
   transition-timing-function: ease-in-out;
-  transition-delay: 1s;
+
 }
 
 .necklace:after {
@@ -210,8 +216,8 @@ main:hover .thirdCircle {
   padding-left: -10vw;
 }
 
-.grain:hover {
-  animation: grain 8s steps(10) infinite;
+.grains:hover {
+  animation: grains 8s steps(10) infinite;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
   content: "";
   height: 850vw;
@@ -234,10 +240,10 @@ main:hover .thirdCircle {
 
 @keyframes spinLeft {
   from {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -250,7 +256,7 @@ main:hover .thirdCircle {
   }
 }
 
-@keyframes grain {
+@keyframes grains {
   0%,
   100% {
     transform: translate(0, 0);
@@ -285,7 +291,7 @@ main:hover .thirdCircle {
 }
 
 /* THEME */
-.grain {
+.grains {
   height: 800vh;
   width: 125vw;
   background: cover;
@@ -303,7 +309,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked ~ .grain {
+input[type="checkbox"]:checked ~ .grains {
   visibility: visible;
   height: 800vh;
   width: 125vw;
@@ -316,9 +322,9 @@ input[type="checkbox"]:checked ~ .grain {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
-input[type="checkbox"]:checked ~ .grain:hover {
+input[type="checkbox"]:checked ~ .grains:hover {
   visibility: visible;
-  animation: grain 2s steps(10) infinite;
+  animation: grains 2s steps(10) infinite;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
   content: "";
   height: 850vw;
@@ -332,4 +338,91 @@ input[type="checkbox"]:checked ~ .grain:hover {
 
 input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
+}
+
+
+
+
+
+
+
+.bg{
+  position: fixed;
+  opacity: 0.5;
+
+  /* z-index: -20; */
+
+}
+/* .grainbg{
+  position: fixed;
+  height: 500vh;
+  width: 500vw;
+  z-index: 20;
+} */
+
+.grain1{
+  width: 100vw;
+  height: 100vh;
+  animation: grain 0.02s steps(10) infinite;
+  animation-direction: reverse;
+}
+
+.grain2{
+  width: 110vw;
+  height: 110vh;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  animation: grain 0.04s steps(10) infinite;
+}
+
+.grain3{
+  width: 200vw;
+  height: 250v
+  top: -10%;
+  left: -10%;
+  opacity: 0.2;
+}
+
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0);
+  }
+
+  10% {
+    transform: translate(-1%, -1%);
+  }
+
+  20% {
+    transform: translate(1%, 1%);
+  }
+
+  30% {
+    transform: translate(-2%, -2%);
+  }
+
+  40% {
+    transform: translate(3%, 3%);
+  }
+
+  50% {
+    transform: translate(-3%, -3%);
+  }
+
+  60% {
+    transform: translate(4%, 4%);
+  }
+
+  70% {
+    transform: translate(-4%, -4%);
+  }
+
+  80% {
+    transform: translate(2%, 2%);
+  }
+
+  90% {
+    transform: translate(-3%, -3%);
+  }
 }
