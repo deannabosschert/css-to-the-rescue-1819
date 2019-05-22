@@ -210,6 +210,8 @@ main:hover #thirdCircle {
   left: 50%;
   z-index: 0;
   transform: rotate(45deg);
+  padding:15vw;
+
 }
 
 .necklace:before {
@@ -220,6 +222,11 @@ main:hover #thirdCircle {
   left: 54%;
   z-index: 5;
   border-radius: 50% 50%;
+}
+
+.necklace:hover{
+  position: absolute;
+  animation: falling 1s ease-in;
 }
 
 .fakeHamburger:hover p {
@@ -319,6 +326,13 @@ input[type="checkbox"]:checked ~ .grains {
   background-size: cover;
 }
 
+
+
+input[type="checkbox"]:checked ~ .necklace {
+  z-index: -40;
+  animation: falling 1s ease-in;
+}
+
 input[type="checkbox"]:checked ~ .grains:hover {
   visibility: visible;
   animation: grains 2s steps(10) infinite;
@@ -337,7 +351,40 @@ input[type="checkbox"]:checked ~ .fakeHamburger {
   z-index: 30;
 }
 
+@keyframes falling {
+  0%, 100% {
+    transform: translate(0, 0, 0);
+  }
 
+  10% {
+    transform: translate(-5%, 80%);
+  }
+
+  20% {
+    transform: translate(-10%, 90%);
+  }
+
+  30%{
+    transform: translate(-13%, 100%);
+    transform: rotate(5deg);
+  }
+
+  40% {
+    transform: translate(-15%,120%);
+  }
+
+  50% {
+    transform: translate(-20%, 150%);
+  }
+
+  70%{
+    transform: translate(-25%, 230%);
+  }
+
+  90% {
+    transform: translate(-30%, 300%);
+  }
+}
 
 @keyframes grain {
   0%, 100% {
