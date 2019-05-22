@@ -9,7 +9,7 @@
 html {
   margin: 0;
   padding: 0;
-  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
 }
 
@@ -59,13 +59,13 @@ blockquote {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "limelight", sans-serif;
   font-variant: small-caps;
 }
 
 h2 {
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   border-bottom-style: solid;
   border-bottom-width: 0.05rem;
   border-bottom-color: white;
@@ -75,9 +75,11 @@ h2 {
 h3 {
   font-variant: small-caps;
   font-style: "Oswald";
+  font-size: 0.9rem;
 }
 
 p {
+  font-size: 0.7rem;
 }
 
 img {
@@ -147,6 +149,12 @@ img {
 .circleLeftAbove{
   max-width: 25vh;
   max-height: 25vh;
+  display: flex;
+  align-self: center;
+  position: absolute;
+  margin-top: -12vh;
+  margin-left: -5vw;
+
 }
 
 #thirdCircle {
@@ -233,6 +241,146 @@ main:hover #thirdCircle {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
 }
 
+.grain1 .grain2 .grain3{
+}
+
+.grain1{
+  width: 130%;
+  height: 210%;
+  margin-left: -20%;
+  margin-top: -10%;
+  animation: grain 0.0002s steps(10) infinite;
+  animation-direction: reverse;
+  z-index: 0;
+  position: fixed;
+  opacity: 0.8;
+
+}
+
+.grain2{
+  width: 130%;
+  height: 200%;
+  margin-left: -10%;
+  margin-top: -10%;
+  animation: grain 0.0004s steps(10) infinite;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.grain3{
+  width: 130%;
+  height: 200%;
+  margin-left: -10%;
+  margin-top: -10%;
+  z-index: -2;
+  opacity: 0.85;
+  position: fixed;
+}
+
+.grainbg{
+  display: inline-flex;
+  background-color: black;
+  opacity: 0.4;
+}
+
+
+
+/* THEME */
+.grains {
+  height: 800vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  margin-top: -25vw;
+  opacity: 0.8;
+  z-index: 20;
+  position: absolute;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+  visibility: hidden;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .grains {
+  visibility: visible;
+  height: 800vh;
+  width: 125vw;
+  background: cover;
+  margin-left: -25vw;
+  margin-top: -25vw;
+  opacity: 0.9;
+  z-index: 20;
+  position: fixed;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+  background-size: cover;
+}
+
+input[type="checkbox"]:checked ~ .grains:hover {
+  visibility: visible;
+  animation: grains 2s steps(10) infinite;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+  content: "";
+  height: 850vw;
+  left: -400vw;
+  opacity: 0.9;
+  top: 820vw;
+  width: 150vw;
+  z-index: 23;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
+}
+
+input[type="checkbox"]:checked ~ .fakeHamburger {
+  z-index: 30;
+}
+
+
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0);
+  }
+
+  10% {
+    transform: translate(-1%, -1%);
+  }
+
+  20% {
+    transform: translate(1%, 1%);
+  }
+
+  30% {
+    transform: translate(-2%, -2%);
+  }
+
+  40% {
+    transform: translate(3%, 3%);
+  }
+
+  50% {
+    transform: translate(-3%, -3%);
+  }
+
+  60% {
+    transform: translate(4%, 4%);
+  }
+
+  70% {
+    transform: translate(-4%, -4%);
+  }
+
+  80% {
+    transform: translate(2%, 2%);
+  }
+
+  90% {
+    transform: translate(-3%, -3%);
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -291,143 +439,5 @@ main:hover #thirdCircle {
   }
   90% {
     transform: translate(-10%, 10%);
-  }
-}
-
-/* THEME */
-.grains {
-  height: 800vh;
-  width: 125vw;
-  background: cover;
-  margin-left: -25vw;
-  margin-top: -25vw;
-  opacity: 0.8;
-  z-index: 20;
-  position: absolute;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
-  visibility: hidden;
-}
-
-input[type="checkbox"] {
-  position: absolute;
-  display: none;
-}
-
-input[type="checkbox"]:checked ~ .grains {
-  visibility: visible;
-  height: 800vh;
-  width: 125vw;
-  background: cover;
-  margin-left: -25vw;
-  margin-top: -25vw;
-  opacity: 0.9;
-  z-index: 20;
-  position: fixed;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
-  background-size: cover;
-}
-
-input[type="checkbox"]:checked ~ .grains:hover {
-  visibility: visible;
-  animation: grains 2s steps(10) infinite;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
-  content: "";
-  height: 850vw;
-  left: -400vw;
-  opacity: 0.9;
-  top: 820vw;
-  width: 150vw;
-  z-index: 23;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg");
-}
-
-input[type="checkbox"]:checked ~ .fakeHamburger {
-  z-index: 30;
-}
-
-
-.grain1 .grain2 .grain3{
-}
-
-.grain1{
-  width: 130%;
-  height: 210%;
-  margin-left: -20%;
-  margin-top: -10%;
-  animation: grain 0.0002s steps(10) infinite;
-  animation-direction: reverse;
-  z-index: 0;
-  position: fixed;
-  opacity: 0.8;
-
-}
-
-.grain2{
-  width: 130%;
-  height: 200%;
-  margin-left: -10%;
-  margin-top: -10%;
-  animation: grain 0.0004s steps(10) infinite;
-  position: fixed;
-  z-index: -1;
-  opacity: 0.8;
-}
-
-.grain3{
-  width: 130%;
-  height: 200%;
-  margin-left: -10%;
-  margin-top: -10%;
-  z-index: -2;
-  opacity: 0.85;
-  position: fixed;
-}
-
-.grainbg{
-  display: inline-flex;
-  background-color: black;
-  opacity: 0.4;
-}
-
-
-@keyframes grain {
-  0%, 100% {
-    transform: translate(0, 0, 0);
-  }
-
-  10% {
-    transform: translate(-1%, -1%);
-  }
-
-  20% {
-    transform: translate(1%, 1%);
-  }
-
-  30% {
-    transform: translate(-2%, -2%);
-  }
-
-  40% {
-    transform: translate(3%, 3%);
-  }
-
-  50% {
-    transform: translate(-3%, -3%);
-  }
-
-  60% {
-    transform: translate(4%, 4%);
-  }
-
-  70% {
-    transform: translate(-4%, -4%);
-  }
-
-  80% {
-    transform: translate(2%, 2%);
-  }
-
-  90% {
-    transform: translate(-3%, -3%);
   }
 }
