@@ -2,6 +2,8 @@
 This is a website for the restaurant 'Russ and Daughters'.
 Everything is "Roaring Twenties"-themed.
 
+![screenshot](https://paper-attachments.dropbox.com/s_10BA620165FE32DB3EE837212670E796E3D7D1FB3A7C3434F8B67BE0AF78582E_1558526458474_Screenshot+2019-05-22+at+14.00.15.png)
+
 ## Challenge 1
 One of the challenges working on this was to use a specific methodology; I had to work with SMACCS.
 
